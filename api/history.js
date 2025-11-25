@@ -1,6 +1,6 @@
-import { kv } from '@vercel/kv';
+import { sql } from '@vercel/postgres';
 export default async (req, res) => {
-  const raw = await kv.lrange('chat', 0, -1);
-  const msgs = raw.map(x => JSON.parse(x));
-  res.json(msgs.reverse());
+  const rows = await sql`SELECT u, m, t FROM chat ORDER BY t DESC`;
+  const msgs = rows.rows.map(r => ({ u: r.u, m: r.m, t: Number(r.t) }));
+  res.json(msgs);
 };
