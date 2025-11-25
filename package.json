@@ -1,9 +1,9 @@
 {
-  "name": "retro-chat",
+  "name": "neon-chat",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@vercel/kv": "^1.0.1"
+    "@vercel/postgres": "^0.8.0"
   },
   "engines": { "node": "22.x" }
 }
