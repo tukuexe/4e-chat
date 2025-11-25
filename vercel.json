@@ -1,0 +1,9 @@
+{
+  "functions": {
+    "api/send.js": { "maxDuration": 10 },
+    "api/sse.js": { "maxDuration": 10 },
+    "api/broadcast.js": { "maxDuration": 10 },
+    "api/history.js": { "maxDuration": 10 },
+    "api/clear.js": { "maxDuration": 10 }
+  }
+}
